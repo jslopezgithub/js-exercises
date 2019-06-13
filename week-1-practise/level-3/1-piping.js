@@ -27,5 +27,7 @@ function format(num) {
   return "£" + num.toFixed(2);
 }
 
+var result = multiply(startingValue, 2);
+result = format(add(result, 10));
 console.log("Expected result: 20.00");
 console.log("Actual result: " + result);
