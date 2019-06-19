@@ -12,7 +12,7 @@ Passwords must
 - Have numbers (0-9).
 
 Expected Result:
-PasswordValidationResult= [false, false, frue, true, true]
+PasswordValidationResult= [false, false, true, true, true]
 
 LEVEL 2:
 
@@ -43,6 +43,24 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+var previousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+
+function passwordValid1(password) {
+    return (password.length > 4) 
+    && password.match("[A-Z]") != null
+    && password.match("[a-z]") != null
+    && password.match("[0-9]") != null;
+}
+
+function passwordValid2(password) {
+    return passwordValid1(password) && (password.match("[!#$%.]") != null);
+}
+
+function passwordValid3(password) {
+    return passwordValid2(password) && !previousPassword.includes(password);
+}
+
+var PasswordValidationResult = password.map(passwordValid3);
 
 console.log(PasswordValidationResult)
