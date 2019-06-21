@@ -6,6 +6,7 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
+  /*
   var newArray = [...arr];
 
   var index = arr.indexOf(valueToReplace);
@@ -14,6 +15,10 @@ function replace(arr, valueToReplace, newValue) {
   }
 
   return newArray; // complete this statement
+  */
+  numbers.splice(numbers.indexOf(valueToReplace), 1, newValue);
+  return numbers; // complete this statement
+
 }
 
 /* 
