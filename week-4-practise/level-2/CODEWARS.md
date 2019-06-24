@@ -1,4 +1,4 @@
-Complete the following CodeWars exercises. Go to the webpages below and follow the instructions there.
+Complete the following CodeWars exercises. Go to the webpage below and follow the instructions there.
 
 Click "ATTEMPT" to test your solution.
 

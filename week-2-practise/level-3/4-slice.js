@@ -8,7 +8,10 @@ function replace(arr, index, value) {
   // var newArray = [...arr];
   // newArray[index] = value;
   // return newArray; // complete this statement
-  return arr.slice(arr.indexOf(index), 1, value); // complete this statement
+  var newArr = arr.slice(); // copy new array
+  newArr.splice(index, 1, value); // complete this statement
+  //newArr[index] = value;
+  return newArr;
 }
 
 /* 

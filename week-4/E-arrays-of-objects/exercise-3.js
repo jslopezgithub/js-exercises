@@ -7,10 +7,10 @@ We want to build an object to simulate a Restaurant Finder application (see belo
 1) Define a method findAvailableRestaurants which takes a number of people in parameter and returns 
 all the restaurant names which have the required number of seats available at the moment.
 
-2) Define a method findRestaurantServingDish which takes a dish name in parameter and returns
+2) Define a method findRestaurantServingDish which takes a dish name as a parameter and returns
 all the restaurant names serving this dish.
 
-3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (centre, west),
+3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow as a parameter (center, west),
 and returns the number of restaurants in this area.
 */
 
@@ -60,13 +60,16 @@ var restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
+        var available = this.restaurants.filter(restaurant => {
+            return (restaurant.totalSeats - restaurant.numberOfCustomers) >= numberOfPeople;
+        });
+        return available.map(restaurant => restaurant.name);
     },
     findRestaurantServingDish: function(dishName) {
-        // Complete here
+        return this.restaurants.filter(restaurant => restaurant.menu.includes(dishName)).map(destination => destination.name);
     },
     countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
+        return this.restaurants.filter(restaurant => restaurant.address.area === area).length;
     }
 };
 
