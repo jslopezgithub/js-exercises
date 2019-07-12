@@ -15,6 +15,7 @@
 */
 function exercise1() {
   var promise1 = resolvedPromise()
+  promise1.then(value => document.querySelector("#exercise1").innerText = value);
 }
 
 /*
@@ -27,7 +28,8 @@ function exercise1() {
   Promise"
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(value => document.querySelector("#exercise2").innerText = value);
 }
 
 /*
@@ -40,7 +42,8 @@ function exercise2() {
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+  promise3.then(value => document.querySelector("#exercise3").innerText = value);
 }
 
 /*
@@ -56,6 +59,8 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise()
+  promise4.then(value => value + "Javier").then(
+    value => document.querySelector("#exercise4").innerText = value)
 }
 
 /*
@@ -73,6 +78,9 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  var promise5 = new Promise((resolve, rejecte) => {
+    resolve("Hello Promises!");
+  }).then(value => document.querySelector("#exercise5").innerText = value);
 }
 
 /*
@@ -90,6 +98,9 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
+  new Promise((resolve, reject) => {
+    reject("Something went wrong!");
+  }).catch(value => document.querySelector("#exercise6").innerText = value);
 }
 
 
