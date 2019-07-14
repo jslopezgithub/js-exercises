@@ -14,8 +14,8 @@ Use fetch to load the text of an existing clipboard and display it in the browse
 HTTP Verb: GET
 API: https://codeyourfuture.herokuapp.com/api/clipboard?title=myClipboardId
 Also, for GET request, you can use the url directly in your browser address bar
+const fetch = require("node-fetch");
 */
-
 
 // Task 1: create a new clipboard
 // Complete the code below
