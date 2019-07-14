@@ -28,7 +28,11 @@ var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
 var newNumbers = replace(numbers, 3, 2);
+<<<<<<< HEAD
 var newNames = replace(numbers, "Ashleigh", "Rares");
+=======
+var newNames = replace(names, "Ashleigh", "Rares");
+>>>>>>> master
 
 console.log(numbers);
 console.log(newNumbers);

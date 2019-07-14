@@ -27,3 +27,20 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+var button = document.querySelector("#submit");
+var button = document.addEventListener("click", () => {
+    var input = document.querySelector("#message-input");
+    var value = input.value;
+    if (value) {
+        var requestBody = { "content": value };
+        var postRequestParameters = {
+            body: JSON.stringify(requestBody),
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            }
+        };
+        fetch("https://codeyourfuture.herokuapp.com/api/messages", postRequestParameters);
+        input.value = "";
+    }
+});
