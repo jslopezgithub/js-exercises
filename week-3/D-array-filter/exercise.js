@@ -9,7 +9,7 @@
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
 function isPair(item) {
-  return (item != null) && Array.isArray(item) && (item.length == 2);
+  return Array.isArray(item) && (item.length == 2);
 }
 
 var pairsByIndex = pairsByIndexRaw.filter(isPair); // Complete this statement

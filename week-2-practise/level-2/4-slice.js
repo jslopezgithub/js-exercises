@@ -21,7 +21,6 @@ var newNames = remove(names, 1);
 
 console.log(newNumbers);
 console.log(newNames);
-
 /* 
   EXPECTED RESULT
   ---------------

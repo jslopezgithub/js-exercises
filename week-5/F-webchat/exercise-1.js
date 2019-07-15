@@ -40,7 +40,7 @@ fetch("https://codeyourfuture.herokuapp.com/api/messages")
     .then(messages => {
         var messageList = document.querySelector("#message-list")
         while (messageList.firstChild) {
-            messageList.removeChild(myNode.firstChild);
+            messageList.removeChild(messageList.firstChild);
         }
         messages.forEach(message => {
             var paragraph = document.createElement("p");
